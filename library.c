@@ -142,7 +142,7 @@ void draw_circle(int x, int y, int r, color_t color){
 		draw_pixel(-xx+x0, -yy+y0, color);
 		draw_pixel(-yy+x0, -xx+y0, color);
 		draw_pixel(xx+x0, -yy+y0, color);
-		draw_pixel(yy+x0, -xx+y0, ccolor);
+		draw_pixel(yy+x0, -xx+y0, color);
 		yy++;
 		if(k<=0){
 			k = k + 2 * yy + 1;
