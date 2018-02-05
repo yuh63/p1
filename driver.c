@@ -26,7 +26,7 @@ int main(int argc, char** argv){
 	sleep_ms(3000);
 	draw_pixel(120,150,colorform(0,50,0));
 	draw_pixel(200,110,colorform(20,0,20));
-	draw_rect(100,100,240,320,colorform(30,0,0));
+	draw_rect(100,250,50,100,colorform(30,0,0));
 	//draw_circle(200,250,100,colorform(0,0,30));
 	sleep_ms(3000);
 	clear_screen();
