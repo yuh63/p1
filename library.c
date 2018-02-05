@@ -35,10 +35,10 @@ void draw_circle(int x, int y, int r, color_t color);
 
 void init_graphics(){
 	// initiate the graphics 
-	struct fb_fix_screeninfo fixed_info;
-	struct fb_var_screeninfo variable_info;
+	struct fb_fix_screeninfo fix_info;
+	struct fb_var_screeninfo var_info;
 	struct termios term;
-	framebuffer_device = open ("/dev/fb0", O_RDWR);
+	fd = open ("/dev/fb0", O_RDWR);
 	ioctl (fd, FBIOGET_VSCREENINFO, &var_info);
 	ioctl (fd, FBIOGET_FSCREENINFO, &fix_info);
 	xlen = var_info.xres_virtual;
@@ -135,14 +135,14 @@ void draw_circle(int x, int y, int r, color_t color){
 	int y0 = y;
 	int k = 1 - xx;
 	while(yy <= xx){
-		draw_pixel(xx+x0, yy+y0, c);
-		draw_pixel(yy+x0, xx+y0, c);
-		draw_pixel(-xx+x0, yy+y0, c);
-		draw_pixel(-yy+x0, xx+y0, c);
-		draw_pixel(-xx+x0, -yy+y0, c);
-		draw_pixel(-yy+x0, -xx+y0, c);
-		draw_pixel(xx+x0, -yy+y0, c);
-		draw_pixel(yy+x0, -xx+y0, c);
+		draw_pixel(xx+x0, yy+y0, color);
+		draw_pixel(yy+x0, xx+y0, color);
+		draw_pixel(-xx+x0, yy+y0, color);
+		draw_pixel(-yy+x0, xx+y0, color);
+		draw_pixel(-xx+x0, -yy+y0, color);
+		draw_pixel(-yy+x0, -xx+y0, color);
+		draw_pixel(xx+x0, -yy+y0, color);
+		draw_pixel(yy+x0, -xx+y0, ccolor);
 		yy++;
 		if(k<=0){
 			k = k + 2 * yy + 1;
