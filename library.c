@@ -110,7 +110,6 @@ void draw_pixel(int x, int y, color_t color){
 
 //draw a rectangle
 void draw_rect(int x1, int y1, int width, int height, color_t c){
-	int x, y;
 	// draw four edges separately
 	int i = 0;
 	for(i = 0; i < width; i++){
