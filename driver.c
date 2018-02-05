@@ -28,7 +28,8 @@ int main(int argc, char** argv){
 	draw_rect(100,100,240,150,colorform(30,0,0));
 	draw_rect(90,100,50,90,colorform(30,60,30));
 	sleep_ms(5000);
-	draw_circle(100,100,30,colorform(30,60,30));
+	draw_circle(100,100,30,colorform(30,0,30));
+	draw_circle(200,150,50,colorform(0,60,30));
 	sleep_ms(5000);
 	clear_screen();
 	exit_graphics();

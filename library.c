@@ -103,7 +103,7 @@ void draw_pixel(int x, int y, color_t color){
 		return;
 	}
 	unsigned long horizontal = x;
-	unsigned long vertical = y * size;
+	unsigned long vertical = y * size/2; // divided by 2 since pixels are distorted at first
 	unsigned short *ptr = (fb_ptr + horizontal + vertical);
 	*ptr = color;
 }
