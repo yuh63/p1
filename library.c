@@ -120,10 +120,10 @@ void draw_rect(int x1, int y1, int width, int height, color_t c){
 		draw_pixel(x1, y1++, c);
 	}
 	for(i = 0; i <= width; i++){
-		draw_pixel(x1++, y1 + height, c);
+		draw_pixel(x1--, y1, c);
 	}
 	for(i = 0; i <= height; i++){
-		draw_pixel(x1 + width, y1++, c);
+		draw_pixel(x1, y1--, c);
 	}
 }
 
