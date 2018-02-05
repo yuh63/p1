@@ -5,7 +5,7 @@
  * CS1550
  */
  
-#include <stdio.h>
+#include "library.c"
 
 typedef unsigned short color_t;
 
