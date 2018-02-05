@@ -57,12 +57,12 @@ void init_graphics(){
 void exit_graphics(){
 	//unsetting echo and keypress buffer
 	struct termios term;
-	ioctl(STDIN_FILENO, TCGETS, &term);
-	term.c_lflag |= ~ICANON;
-	term.c_lflag |= ~ECHO;
-	ioctl(STDIN_FILENO, TCSETS, &term);
 	//unmap framme buffer
 	munmap(fb_ptr, ylen * size);
+	ioctl(STDIN_FILENO, TCGETS, &term);
+	term.c_lflag |= ICANON;
+	term.c_lflag |= ECHO;
+	ioctl(STDIN_FILENO, TCSETS, &term);
 	close(fd);
 }
 

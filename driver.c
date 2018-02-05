@@ -22,13 +22,12 @@ int main(int argc, char** argv){
 	// a sample program to show functions
 	init_graphics();
 	clear_screen();
-	getkey();
 	sleep_ms(3000);
 	draw_pixel(200,300,0xFFFFFF);
-	draw_pixel(0,-150,0x0000FF);
+	draw_pixel(0,150,0x0000FF);
 	draw_rect(0,0,240,360,0xF69679);
-	draw_circle(-100,150,100,0x91268F);
-	sleep_ms(10000);
+	draw_circle(200,250,100,0x91268F);
+	sleep_ms(3000);
 	clear_screen();
 	exit_graphics();
 	return 0;
