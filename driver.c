@@ -23,10 +23,10 @@ int main(int argc, char** argv){
 	init_graphics();
 	clear_screen();
 	sleep_ms(3000);
-	draw_pixel(200,300,0xFFFFFF);
-	draw_pixel(0,150,0x0000FF);
-	draw_rect(0,0,240,360,0xF69679);
-	draw_circle(200,250,100,0x91268F);
+	draw_pixel(200,300,10);
+	draw_pixel(0,150,20);
+	draw_rect(0,0,240,360,30);
+	draw_circle(200,250,100,40);
 	sleep_ms(3000);
 	clear_screen();
 	exit_graphics();
