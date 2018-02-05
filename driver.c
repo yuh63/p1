@@ -30,14 +30,6 @@ int main(int argc, char** argv){
 	draw_circle(-100,150,100,0x91268F);
 	sleep_ms(10000);
 	clear_screen();
-	int i = 0;
-	int j = 0;
-	for(i=0;i<100;i++){
-		for(j=0;j<200;j++){
-			draw_pixel(i+100,j-300,0x00BFF3);
-		}
-	}
-	clear_screen();
 	exit_graphics();
 	return 0;
 }
