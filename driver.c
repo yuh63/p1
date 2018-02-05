@@ -23,7 +23,6 @@ int main(int argc, char** argv){
 	// a sample program to show functions
 	init_graphics();
 	clear_screen();
-	sleep_ms(3000);
 	draw_pixel(100,50,colorform(0,50,0));
 	draw_pixel(0,150,colorform(20,0,20));
 	draw_rect(100,100,240,150,colorform(30,0,0));
