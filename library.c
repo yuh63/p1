@@ -113,16 +113,16 @@ void draw_rect(int x1, int y1, int width, int height, color_t c){
 	int x, y;
 	// draw four edges separately
 	int i = 0;
-	for(i = 0; i <= width; i++){
+	for(i = 0; i < width; i++){
 		draw_pixel(x1++, y1, c);
 	}
-	for(i = 0; i <= height; i++){
+	for(i = 0; i < height; i++){
 		draw_pixel(x1, y1++, c);
 	}
-	for(i = 0; i <= width; i++){
+	for(i = 0; i < width; i++){
 		draw_pixel(x1--, y1, c);
 	}
-	for(i = 0; i <= height; i++){
+	for(i = 0; i < height; i++){
 		draw_pixel(x1, y1--, c);
 	}
 }
