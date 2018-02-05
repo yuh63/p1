@@ -29,6 +29,9 @@ int main(int argc, char** argv){
 	draw_rect(90,100,50,90,colorform(30,60,30));
 	//draw_circle(200,250,100,colorform(0,0,30));
 	sleep_ms(5000);
+	draw_rect(200,300,140,50,colorform(30,30,0));
+	draw_rect(50,200,120,30,colorform(30,0,30));
+	sleep_ms(5000);
 	clear_screen();
 	exit_graphics();
 	return 0;
